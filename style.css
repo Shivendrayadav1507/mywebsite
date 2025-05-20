@@ -1,0 +1,146 @@
+:root {
+  --bg: #0d0d1a;
+  --accent: #00fff7;
+  --secondary: #1a1a2e;
+  --text: #e0e0e0;
+  --error: #ff005a;
+  --card: #23234a;
+  --navbar-bg: #191940e6;
+  --navbar-border: #00fff7;
+  --shadow: 0 0 24px #00fff799;
+  --font-main: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, var(--bg) 60%, var(--card) 100%);
+  color: var(--text);
+  font-family: var(--font-main);
+  min-height: 100vh;
+}
+
+.navbar {
+  background: var(--navbar-bg);
+  border-bottom: 2px solid var(--navbar-border);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0.5em 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar a {
+  color: var(--accent);
+  padding: 0.6em 1.2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  border-radius: 8px;
+  margin: 0 2px;
+}
+
+.navbar a:hover, .navbar a.active {
+  background: var(--accent);
+  color: var(--bg);
+  box-shadow: var(--shadow);
+}
+
+.hero {
+  text-align: center;
+  margin: 3em 0 2em 0;
+}
+
+.hero h1 {
+  font-size: 2.8em;
+  color: var(--accent);
+  text-shadow: 0 0 20px var(--accent);
+  margin-bottom: 0.3em;
+}
+
+.hero p {
+  font-size: 1.3em;
+  color: var(--text);
+}
+
+section, main {
+  background: var(--card);
+  margin: 2em auto 2em auto;
+  padding: 2em;
+  max-width: 800px;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+h2 {
+  color: var(--accent);
+  margin-top: 0;
+  font-size: 2em;
+}
+
+ul, ol {
+  margin-left: 2em;
+}
+
+footer {
+  text-align: center;
+  color: var(--accent);
+  padding: 1.5em 0 0.5em 0;
+  font-size: 1.1em;
+  border-top: 1px solid var(--accent);
+  margin-top: 3em;
+}
+
+input[type="password"] {
+  background: var(--secondary);
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  border-radius: 7px;
+  padding: 0.7em;
+  font-size: 1.1em;
+  margin-bottom: 0.7em;
+  transition: border 0.2s;
+  font-family: var(--font-main);
+}
+
+button {
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  padding: 0.7em 1.2em;
+  font-size: 1.1em;
+  border-radius: 7px;
+  font-family: var(--font-main);
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 0 8px var(--accent);
+  margin-left: 0.5em;
+}
+
+button:hover {
+  background: var(--secondary);
+  color: var(--accent);
+  border: 2px solid var(--accent);
+}
+
+.error {
+  color: var(--error);
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    padding-bottom: 1em;
+  }
+  section, main {
+    padding: 1em;
+    margin: 1em;
+  }
+}
